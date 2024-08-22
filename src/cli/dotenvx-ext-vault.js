@@ -32,6 +32,13 @@ program.command('encrypt')
   .option('-f, --env-file <paths...>', 'path(s) to your env file(s)')
   .action(require('./actions/encrypt'))
 
+// dotenvx ext vault decrypt
+program.command('decrypt')
+  .description('decrypt .env.vault to .env*')
+  .argument('[directory]', 'directory to decrypt', '.')
+  .option('-e, --environment <environments...>', 'environment(s) to decrypt')
+  .action(require('./actions/decrypt'))
+
 // cli
 program
   .name(packageJson.name)
