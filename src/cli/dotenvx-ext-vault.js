@@ -39,6 +39,12 @@ program.command('decrypt')
   .option('-e, --environment <environments...>', 'environment(s) to decrypt')
   .action(require('./actions/decrypt'))
 
+// dotenvx ext vault status
+program.command('status')
+  .description('compare your .env* content(s) to your .env.vault decrypted content(s)')
+  .argument('[directory]', 'directory to check status against', '.')
+  .action(require('./actions/status'))
+
 // cli
 program
   .name(packageJson.name)
