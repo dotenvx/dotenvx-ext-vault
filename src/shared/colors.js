@@ -1,3 +1,4 @@
+/* c8 ignore start */
 const depth = require('../lib/helpers/colorDepth')
 
 const colors16 = new Map([
@@ -48,3 +49,4 @@ module.exports = {
   getColor,
   bold
 }
+/* c8 ignore stop */
