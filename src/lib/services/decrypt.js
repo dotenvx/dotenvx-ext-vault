@@ -34,7 +34,7 @@ class Decrypt {
     if (!fs.existsSync(this.envKeysFilepath)) {
       const code = 'MISSING_ENV_KEYS_FILE'
       const message = `missing .env.keys (${this.envKeysFilepath})`
-      const help = '? a .env.keys file must be present in order to decrypt your .env.vault contents to .env file(s)'
+      const help = '? You can copy the .env.keys file from the "Deploy" page, after running [npx dotenv-vault@latest open].'
 
       const error = new Error(message)
       error.code = code
